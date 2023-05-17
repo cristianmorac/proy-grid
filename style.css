@@ -1,0 +1,178 @@
+body {
+  display: grid;
+  place-content: center;
+}
+
+/*todo: estructura en áreas */
+
+.container {
+  display: grid;
+  width: 1000px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "logo nav nav nav"
+    "main aside aside aside"
+    "section section section section";
+}
+
+#menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "image image image image"
+    "title title texto texto";
+}
+
+#suggested {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "new1 new2 new3";
+}
+
+/*Todo: Divisiones internar nav-bar */
+
+.logo {
+  grid-area: logo;
+  width: 100vh;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  color: black;
+}
+
+#nav-bar {
+  grid-area: nav;
+}
+
+#nav-bar ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: #bebbc6;
+}
+
+#sidebar {
+  grid-area: aside;
+  padding: 13px;
+  background-color: #00001a;
+}
+
+#sidebar h2 {
+  color: #d9b161;
+}
+
+#sidebar h3 {
+  color: #f1f0f4;
+}
+
+#sidebar p {
+  color: #7f7f91;
+}
+
+#sidebar .text-sidebar {
+  border-bottom: #7f7f91 1px solid;
+}
+
+#suggested {
+  grid-area: section;
+}
+
+/* todo: Divisione menu */
+
+.image {
+  grid-area: image;
+}
+
+.image img {
+  width: 100%;
+  height: 200px;
+}
+
+#menu .title h2 {
+  font-size: 50px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.title {
+  grid-area: title;
+}
+
+.text {
+  grid-area: texto;
+  margin: 20px;
+  color: #a09ba3;
+  font-weight: 400;
+}
+
+.text button {
+  background-color: #e0665a;
+  border: none;
+  color: #faf5e8;
+  padding: 10px;
+  letter-spacing: 5px;
+}
+
+/* todo: Noticias */
+
+.content-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+}
+
+#suggested .suggested-img {
+  width: 70px;
+  height: 100px;
+  padding: 10px;
+}
+
+.new1,
+.new2,
+.new3 {
+  /* grid-area: new1; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "img content content";
+  margin: 5px;
+}
+
+.new1 {
+  grid-area: new1;
+}
+
+.new1 {
+  grid-area: new2;
+}
+
+.new1 {
+  grid-area: new3;
+}
+
+.suggested-img {
+  grid-area: img;
+}
+
+.suggested-content {
+  grid-area: content;
+}
+
+.suggested-content p{
+  padding: 0;
+  font-size: 14px;
+}
+
+.suggested-content h3 {
+  color: #A9A4AE;
+  font-size: 30px;
+  font-weight: 300;
+}
+
